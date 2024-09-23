@@ -9,7 +9,8 @@ cp /etc/apk/repositories /mnt/newroot/etc/apk
 
 apk --allow-untrusted -U --root /mnt/newroot --initdb add \
     alpine-base \
-    linux-firmware-none linux-lts openssh-server openssh-client chrony acpid syslinux sgdisk partx mount zfs wireless-tools wpa_supplicant
+    linux-firmware-none linux-lts openssh-server openssh-client chrony acpid syslinux sgdisk partx mount zfs wireless-tools wpa_supplicant &&
+apk add doas sudo lightdm-gtk-greeter speedfetch xfce4-terminal awesome font-terminus wireplumber pipewire-pulse pipewire-alsa pavucontrol awesome thunar thunar-archive-plugin ip6tables iptables rofi picom xautolock polkit-gnome hd-idle xterm xf86-video-vmware xf86-input-vmmouse feh git &&
 
 cp /etc/hostid /mnt/newroot/etc
 cp /etc/resolv.conf /mnt/newroot/etc
@@ -44,6 +45,8 @@ chroot /mnt/newroot rc-update add crond default
 chroot /mnt/newroot rc-update add syslog default
 chroot /mnt/newroot rc-update add chronyd default
 chroot /mnt/newroot rc-update add zfs-mount default
+chroot /mnt/newroot rc-update add lightdm
+chroot /mnt/newroot rc-update add dbus
 # chroot /mnt/newroot rc-update add zfs-import default
 
 # fstab
