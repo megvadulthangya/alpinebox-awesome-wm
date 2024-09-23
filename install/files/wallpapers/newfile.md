@@ -1,7 +1,7 @@
 Wallpepers for awesome-wm
 ![Image 1](wallpaperflare.com_wallpaper(6).jpg)
 ![Image 2](310506925_68874cd2-3392-47de-a548-4e73d823c367.jpg)
-![Image 3](3d-rendering-hexagonal-texture-background(1).jpg)
+![Image 3](wallpaperflare.com_wallpaper.jpg)
 ![Image 4](3d-rendering-hexagonal-texture-background.jpg)
 ![Image 5](Alpine-Linux-2560x1600.png)
 ![Image 6](wallpaperflare.com_wallpaper(1).jpg)
@@ -14,4 +14,4 @@ Wallpepers for awesome-wm
 ![Image 13](wp14035858-alpine-linux-wallpapers.jpg)
 ![Image 14](wp14035882-alpine-linux-wallpapers.jpg)
 ![Image 15](wp3150354-alpine-wallpapers.jpg)
-![Image 16](wallpaperflare.com_wallpaper.jpg)
+
