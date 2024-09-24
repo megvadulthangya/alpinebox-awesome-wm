@@ -12,6 +12,8 @@ http://dl-cdn.alpinelinux.org/alpine/v3.20/main
 http://dl-cdn.alpinelinux.org/alpine/v3.20/community
 EOF
 
+apk update &&
+
 mkdir -p /mnt/newroot/etc/apk
 cp /etc/apk/repositories /mnt/newroot/etc/apk
 
