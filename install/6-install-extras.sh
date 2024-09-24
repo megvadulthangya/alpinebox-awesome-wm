@@ -23,8 +23,8 @@ sed "s/%v/$VER/" -i $ISSUE
 cp files/z_dtap-prompt.sh $ROOT/etc/profile.d/
 
 ########### this repo
-cp -R .. $ROOT/root/alpinebox
-chown -R root:root $ROOT/root/alpinebox
+cp -R .. $ROOT/root/alpinebox-awesome-wm
+chown -R root:root $ROOT/root/alpinebox-awesome-wm
 
 ########## stuff to make life easier
 mkdir $ROOT/root/.ssh
