@@ -10,7 +10,7 @@ cp /etc/apk/repositories /mnt/newroot/etc/apk
 apk --allow-untrusted -U --root /mnt/newroot --initdb add \
     alpine-base \
     linux-firmware-none linux-lts openssh-server openssh-client chrony acpid syslinux sgdisk partx mount zfs wireless-tools wpa_supplicant &&
-apk add doas sudo lightdm-gtk-greeter speedfetch xfce4-terminal awesome font-terminus wireplumber pipewire-pulse pipewire-alsa pavucontrol awesome thunar thunar-archive-plugin ip6tables iptables rofi picom xautolock polkit-gnome hd-idle xterm xf86-video-vmware xf86-input-vmmouse feh git &&
+apk add doas sudo lightdm-gtk-greeter xfce4-terminal awesome wireplumber pipewire-pulse pipewire-alsa pavucontrol thunar thunar-archive-plugin imagemagick rofi picom xautolock polkit-gnome hd-idle feh &&
 
 cp /etc/hostid /mnt/newroot/etc
 cp /etc/resolv.conf /mnt/newroot/etc
