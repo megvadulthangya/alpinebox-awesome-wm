@@ -2,7 +2,15 @@
 
 set -e
 
-echo "ALPINEBOX: Installing alpine in /mnt/newroot"
+echo "ALPINEBOX: Changing Repositories and Installing alpine in /mnt/newroot"
+
+cat /dev/null /etc/apk/repositories &&
+
+cat > /etc/apk/repositories << EOF
+/media/cdrom/apks
+http://dl-cdn.alpinelinux.org/alpine/v3.20/main
+http://dl-cdn.alpinelinux.org/alpine/v3.20/community
+EOF
 
 mkdir -p /mnt/newroot/etc/apk
 cp /etc/apk/repositories /mnt/newroot/etc/apk
