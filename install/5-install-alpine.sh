@@ -11,18 +11,19 @@ apk --allow-untrusted -U --root /mnt/newroot --initdb add \
     alpine-base \
     linux-firmware-none linux-lts openssh-server openssh-client chrony acpid syslinux sgdisk partx mount zfs wireless-tools wpa_supplicant &&
 apk add doas sudo lightdm-gtk-greeter xfce4-terminal awesome wireplumber pipewire-pulse pipewire-alsa pavucontrol thunar thunar-archive-plugin imagemagick rofi picom xautolock polkit-gnome i3lock-color hd-idle feh git &&
+
 git clone https://github.com/lcpz/awesome-freedesktop.git /mnt/newroot/etc/xdg/awesome/freedesktop &&
 
-wget -q https://github.com/megvadulthangya/alpinebox-awesome-wm/raw/refs/heads/awesome-wm/install/files/cfgs/rc.lua -O /mnt/newroot/etc/xdg/awesome/rc.lua &&
+cp -f /files/cfgs/rc.lua -O /mnt/newroot/etc/xdg/awesome/rc.lua &&
 
-wget -q https://github.com/megvadulthangya/alpinebox-awesome-wm/raw/refs/heads/awesome-wm/install/files/cfgs/picom.conf -O /mnt/newroot/etc/xdg/picom.conf &&
+cp /files/cfgs/picom.conf -O /mnt/newroot/etc/xdg/picom.conf &&
 
-wget -q https://github.com/megvadulthangya/alpinebox-awesome-wm/raw/refs/heads/awesome-wm/install/files/cfgs/locker.sh -O /mnt/newroot/etc/xdg/awesome/locker.sh &&
+cp /files/cfgs/locker.sh -O /mnt/newroot/etc/xdg/awesome/locker.sh &&
 
 mkdir /mnt/newroot/usr/share/wallpapers &&
 
-wget -q https://github.com/megvadulthangya/alpinebox-awesome-wm/raw/refs/heads/awesome-wm/install/files/wallpapers/wallpapers.tgz &&
-tar -xvzf wallpapers.tgz -C /mnt/newroot/usr/share/wallpapers &&
+
+tar -xvzf /files/wallpapers/wallpapers.tgz -C /mnt/newroot/usr/share/wallpapers &&
 
 cp /etc/hostid /mnt/newroot/etc
 cp /etc/resolv.conf /mnt/newroot/etc
