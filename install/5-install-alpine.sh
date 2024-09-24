@@ -14,16 +14,16 @@ apk add doas sudo lightdm-gtk-greeter xfce4-terminal awesome wireplumber pipewir
 
 git clone https://github.com/lcpz/awesome-freedesktop.git /mnt/newroot/etc/xdg/awesome/freedesktop &&
 
-cp -f /files/cfgs/rc.lua /mnt/newroot/etc/xdg/awesome/rc.lua &&
+cp -f files/cfgs/rc.lua /mnt/newroot/etc/xdg/awesome/rc.lua &&
 
-cp /files/cfgs/picom.conf /mnt/newroot/etc/xdg/picom.conf &&
+cp files/cfgs/picom.conf /mnt/newroot/etc/xdg/picom.conf &&
 
-cp /files/cfgs/locker.sh /mnt/newroot/etc/xdg/awesome/locker.sh &&
+cp files/cfgs/locker.sh /mnt/newroot/etc/xdg/awesome/locker.sh &&
 
 mkdir /mnt/newroot/usr/share/wallpapers &&
 
 
-tar -xvzf /files/wallpapers/wallpapers.tgz -C /mnt/newroot/usr/share/wallpapers &&
+tar -xvzf files/wallpapers/wallpapers.tgz -C /mnt/newroot/usr/share/wallpapers &&
 
 cp /etc/hostid /mnt/newroot/etc
 cp /etc/resolv.conf /mnt/newroot/etc
