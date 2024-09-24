@@ -23,10 +23,10 @@ apk update
 apk add git 
 
 if ! [ -e alpinebox ]; then 
-    git clone --depth 1 https://github.com/psy0rz/alpinebox.git
-    cd alpinebox
+    git clone --depth 1 -b awesome-wm https://github.com/megvadulthangya/alpinebox-awesome-wm.git
+    cd alpinebox-awesome-wm
 else
-    cd alpinebox
+    cd alpinebox-awesome-wm
     git pull
 fi
 
