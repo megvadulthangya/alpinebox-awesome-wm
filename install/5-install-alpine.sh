@@ -10,7 +10,9 @@ cp /etc/apk/repositories /mnt/newroot/etc/apk
 apk --allow-untrusted -U --root /mnt/newroot --initdb add \
     alpine-base \
     linux-firmware-none linux-lts openssh-server openssh-client chrony acpid syslinux sgdisk partx mount zfs wireless-tools wpa_supplicant &&
-apk add doas sudo lightdm-gtk-greeter xfce4-terminal awesome wireplumber pipewire-pulse pipewire-alsa pavucontrol thunar thunar-archive-plugin imagemagick rofi picom xautolock polkit-gnome hd-idle feh &&
+apk add doas sudo lightdm-gtk-greeter xfce4-terminal awesome wireplumber pipewire-pulse pipewire-alsa pavucontrol thunar thunar-archive-plugin imagemagick rofi picom xautolock polkit-gnome hd-idle feh git &&
+git clone https://github.com/lcpz/awesome-freedesktop.git /mnt/newroot/etc/xdg/awesome/freedesktop &&
+
 
 cp /etc/hostid /mnt/newroot/etc
 cp /etc/resolv.conf /mnt/newroot/etc
