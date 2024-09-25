@@ -75,8 +75,8 @@ chroot /mnt/newroot rc-update add crond default
 chroot /mnt/newroot rc-update add syslog default
 chroot /mnt/newroot rc-update add chronyd default
 chroot /mnt/newroot rc-update add zfs-mount default
-#chroot /mnt/newroot rc-update add lightdm
-#chroot /mnt/newroot rc-update add dbus
+chroot /mnt/newroot rc-update add lightdm
+chroot /mnt/newroot rc-update add dbus
 # chroot /mnt/newroot rc-update add zfs-import default
 
 # fstab
