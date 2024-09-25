@@ -14,6 +14,8 @@ EOF
 
 apk update &&
 
+apk add git 
+
 mkdir -p /mnt/newroot/etc/apk
 cp /etc/apk/repositories /mnt/newroot/etc/apk
 
@@ -21,7 +23,10 @@ apk --allow-untrusted -U --root /mnt/newroot --initdb add \
     alpine-base \
     linux-firmware-none linux-lts openssh-server openssh-client chrony acpid syslinux sgdisk partx mount zfs wireless-tools wpa_supplicant &&
 
-apk add doas sudo lightdm lightdm-gtk-greeter xfce4-terminal awesome wireplumber pipewire-pulse pipewire-alsa pavucontrol thunar thunar-archive-plugin imagemagick rofi picom xautolock polkit-gnome i3lock-color hd-idle feh git &&
+apk fetch xorg-server xf86-input-libinput xinit eudev mesa-dri-gallium doas sudo lightdm lightdm-gtk-greeter xfce4-terminal awesome wireplumber pipewire-pulse pipewire-alsa pavucontrol thunar thunar-archive-plugin imagemagick rofi picom xautolock polkit-gnome i3lock-color hd-idle feh git &&
+
+apk --allow-untrusted -U --root /mnt/newroot --initdb add \
+xorg-server xf86-input-libinput xinit eudev mesa-dri-gallium doas sudo lightdm lightdm-gtk-greeter xfce4-terminal awesome wireplumber pipewire-pulse pipewire-alsa pavucontrol thunar thunar-archive-plugin imagemagick rofi picom xautolock polkit-gnome i3lock-color hd-idle feh git &&
 
 
 git clone https://github.com/lcpz/awesome-freedesktop.git /mnt/newroot/etc/xdg/awesome/freedesktop &&
